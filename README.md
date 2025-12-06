@@ -1,0 +1,1 @@
+git@github.com:EfantorG/posmotri-v-okno-fd.git
