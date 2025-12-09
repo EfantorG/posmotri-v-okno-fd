@@ -42,7 +42,7 @@ ol {
 .content {
   display: flex;
   width: 1140px;
-  height: 534px;
+  min-height: 534px;
   justify-self: center;
   align-self: center;
   justify-content: space-between;
@@ -67,7 +67,7 @@ ol {
 .search-form {
   width: 711px;
   box-sizing: border-box;
-  height: 54px;
+  min-height: 54px;
   display: flex;
   align-content: flex-end;
   justify-content: space-between;
@@ -85,7 +85,7 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -177,7 +177,7 @@ ol {
   height: 16px;
   outline: 1px solid #fff;
   outline-offset: 1px;
-  background-color: none;
+  background: none;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox{
@@ -205,7 +205,7 @@ ol {
   font-weight: bold;
   font-size: 75px;
   line-height: 94%;
-  height: 210px;
+  min-height: 210px;
 }
 
 .content__accent {
@@ -215,22 +215,17 @@ ol {
 .content__list-container {
   width: 397px;
   gap: 30px;
-  min-height: 298px;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
+  height: 298px;
 }
 
 .content__list-item {
-  height: 103px;
+  min-height: 103px;
   padding-left: 3px;
   padding-right: 3px;
-}
-
-.content__list-item:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
 }
 
 .content__list {
@@ -258,6 +253,15 @@ ol {
   text-decoration: none;
   font-size: 18px;
   font-family: 'Fira Sans Condensed', 'Arial', sans-serif;
+}
+
+.content__list-item:focus-visible .content__card-link {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.content__card-link:active {
+  background-color: #545050;
 }
 
 .content__card-link:hover {
@@ -289,13 +293,13 @@ ol {
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  height: 67px;
+  min-height: 67px;
   overflow: hidden;
 }
 
 .more-button {
   width: 390px;
-  height: 34px;
+  min-height: 34px;
   padding-bottom: 2px;
   padding-left: 2px;
 }
